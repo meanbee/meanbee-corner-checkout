@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="head">
+            <!-- Remove unwanted magento base theme assets -->
+            <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
+
+            <!-- Load Raleway font -->
+            <action method="addLinkRel"><rel>stylesheet</rel><href>//fonts.googleapis.com/css?family=Raleway:700,400,300</href></action>
+
+            
+            <!-- Load custom stylesheet for IE else load default styles -->
+            <action method="addItem"><type>skin_css</type><name>css/application-ie9.css</name><params/><if><![CDATA[ (IE 9) & (!IEMobile)]]></if></action>
+            <action method="addItem"><type>skin_css</type><name>css/application-ie8.css</name><params/><if><![CDATA[ (lte IE 8) & (!IEMobile)]]></if></action>
+            <action method="addItem"><type>skin_css</type><name>css/application.css</name><params/><if><![CDATA[<!--[if (gt IE 9) | (IEMobile)]><!-->]]></if></action>
+        </reference>
+
+        <reference name="right">
+            <block type="core/template" name="checkout" template='checkout/checkout.phtml' before='product_viewed'></block>
+        </reference>
+
+        <reference name="footer">
+            <!-- Load Javascript to the head of the page -->
+            <block name="footer.js" type="page/html_head"/>
+        </reference>
+
+        <reference name="footer.js">
+            <action method="addItem"><type>skin_js</type><path>js/classie.js</path></action>
+            <action method="addItem"><type>skin_js</type><path>js/checkout.js</path></action>
+        </reference>
+    </default>
+</layout>

@@ -1,0 +1,49 @@
+// Vertical rhythm settings
+// ------------------------------------------------
+$vertical-spacing-unit: 20px;
+$heading-spacing-unit: .5em 0;
+
+// Grid settings applied for the bourbon neat library
+// ------------------------------------------------
+$column: 70px;
+$gutter: 30px;
+$grid-columns: 12;
+$max-width: 1200px;
+
+// Mixin vars
+// ------------------------------------------------
+
+// Colour palette
+// ------------------------------------------------
+$brand-color: (
+    'white': #fff,
+    'light-blue': #cfe6ff,
+    'blue': #96bbe5,
+    'dark-blue': #517cad,
+    'dark-dark-blue': #426a98
+);
+
+// $red: map-get($brand-color, 'blue');
+
+// Main Typographic Heading sizes
+// ------------------------------------------------
+$typography: (
+    'base-font-size': 16px,
+    'heading-one': 90px,
+    'heading-two': 72px,
+    'heading-three': 60px,
+    'heading-four': 48px,
+    'heading-five': 36px,
+    'heading-six': 24px
+);
+
+$base-font-size: map-get($typography, 'base-font-size');
+
+// Common breakpoints
+// ------------------------------------------------
+$breakpoints: (
+    'small': (480px / $base-font-size) * 1rem,
+    'medium': (770px / $base-font-size) * 1rem,
+    'large': (1200px / $base-font-size) * 1rem
+);
+
