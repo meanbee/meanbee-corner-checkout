@@ -4,7 +4,6 @@
         <reference name="head">
             <!-- Remove unwanted magento base theme assets -->
             <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
-            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
             <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
             <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
 
@@ -20,6 +19,14 @@
 
         <reference name="right">
             <block type="core/template" name="checkout" template='checkout/checkout.phtml' before='product_viewed'></block>
+        </reference>
+
+        <reference name="minicart_content">
+            <action method="setTemplate"><name>checkout/cart/sidebar.phtml</name></action>
+            <action method="addItemRender"><type>default</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
+            <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
+            <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
+            <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/sidebar/default.phtml</template></action>
         </reference>
 
         <reference name="footer">
