@@ -587,10 +587,6 @@ ol {
 	padding: 0;
 }
 
-p {
-	margin: 1.25rem 0;
-}
-
 p:empty {
 	margin: 0;
 }
@@ -667,7 +663,7 @@ em {
 	font-family: 'Raleway', sans-serif;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	position: absolute;
+	position: fixed;
 	right: 0;
 	text-align: center;
 	top: 0;

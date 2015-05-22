@@ -160,7 +160,7 @@ ol {
 }
 
 p {
-    @include rem(margin, $vertical-spacing-unit 0);
+
 
     &:empty {
         margin: 0;
