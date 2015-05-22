@@ -4,7 +4,7 @@ Checkout experiments in Magento
 
 ## Demo
 
-Customised shopping minicar is easily accessible via icon placed in right hand corner:
+Customised shopping minicart is easily accessible via icon placed in right hand corner:
 
 ![Checkout easily accessible](docs/checkout-closed.png)
 
